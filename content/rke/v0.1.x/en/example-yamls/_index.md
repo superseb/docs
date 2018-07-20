@@ -134,6 +134,8 @@ services:
         delete-collection-workers: 3
         # Set the level of log output to debug-level
         v: 4
+        # Configure feature-gates
+        feature-gates: "PersistentLocalVolumes=true,VolumeScheduling=true"
     kube-controller:
       # CIDR pool used to assign IP addresses to pods in the cluster
       cluster_cidr: 10.42.0.0/16
